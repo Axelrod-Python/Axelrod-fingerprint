@@ -53,7 +53,7 @@ def write_markdown(strategy):
 
 ## {}
 
-![fingerprint of {}](assets/{}.svg)
+![fingerprint of {}](./assets/{}.svg)
     """.format(strategy.name, strategy.name, strategy.name)
     return markdown
 
