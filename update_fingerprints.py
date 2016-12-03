@@ -14,13 +14,20 @@ import csv
 
 import axelrod as axl
 
-def write_strategy_to_db(strategy, filename="db.csv"):
+def hash_strategy(strategy):
     """
-    Write the hash of a strategy to the db
+    Hash the source code of a strategy
     """
     source_code = "".join(inspect.getsourcelines(strategy)[0])
     hash_object = hashlib.md5(source_code.encode('utf-8'))
     hashed_source = hash_object.hexdigest()
+    return hashed_source
+
+def write_strategy_to_db(strategy, filename="db.csv"):
+    """
+    Write the hash of a strategy to the db
+    """
+    hashed_source = hash_strategy(strategy)
     with open(filename, "a") as db:
         db.write("{},{}\n".format(strategy.name, hashed_source))
 
