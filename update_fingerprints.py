@@ -42,7 +42,7 @@ def obtain_fingerprint(strategy, probe=axl.TitForTat):
     fp = axl.AshlockFingerprint(strategy, probe)
     fp.fingerprint(progress_bar=False, processes=0)
     plot = fp.plot()
-    plot.savefig("assets/{}.svg".format(strategy.name))
+    plot.savefig("assets/{}.png".format(strategy.name))
 
 def write_markdown(strategy):
     """
@@ -53,7 +53,7 @@ def write_markdown(strategy):
 
 ## {}
 
-![fingerprint of {}](./assets/{}.svg)
+![fingerprint of {}](./assets/{}.png)
     """.format(strategy.name, strategy.name, strategy.name)
     return markdown
 
@@ -88,7 +88,7 @@ fp.plot()
     """.format(version)
 
     db = read_db()
-    for strategy in axl.strategies:
+    for strategy in axl.strategies[:4]:
         if strategy.name not in db:
             obtain_fingerprint(strategy)
             write_strategy_to_db(strategy)

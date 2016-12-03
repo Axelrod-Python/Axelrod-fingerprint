@@ -19,24 +19,24 @@ fp = axl.AshlockFingerprint(strategy, probe)
 fp.fingerprint()
 fp.plot()
 ```
-
+    
 
 ## Adaptive
 
-![fingerprint of Adaptive](./assets/Adaptive.svg)
-
+![fingerprint of Adaptive](./assets/Adaptive.png)
+    
 
 ## Adaptive Tit For Tat
 
-![fingerprint of Adaptive Tit For Tat](./assets/Adaptive Tit For Tat.svg)
-
+![fingerprint of Adaptive Tit For Tat](./assets/Adaptive Tit For Tat.png)
+    
 
 ## Aggravater
 
-![fingerprint of Aggravater](./assets/Aggravater.svg)
-
+![fingerprint of Aggravater](./assets/Aggravater.png)
+    
 
 ## ALLCorALLD
 
-![fingerprint of ALLCorALLD](./assets/ALLCorALLD.svg)
-
+![fingerprint of ALLCorALLD](./assets/ALLCorALLD.png)
+    
