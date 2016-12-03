@@ -96,7 +96,8 @@ fp.plot()
 
     db = read_db()
     for strategy in axl.strategies:
-        if strategy.name not in db:
+        name = strategy.name
+        if name not in db or db[name] != hash_strategy(strategy):
             obtain_fingerprint(strategy)
             write_strategy_to_db(strategy)
         markdown += write_markdown(strategy)
