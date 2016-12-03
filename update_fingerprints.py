@@ -88,7 +88,7 @@ fp.plot()
     """.format(version)
 
     db = read_db()
-    for strategy in axl.strategies[:4]:
+    for strategy in axl.strategies:
         if strategy.name not in db:
             obtain_fingerprint(strategy)
             write_strategy_to_db(strategy)
