@@ -28,7 +28,7 @@ fp.plot()
 
 ## Adaptive Tit For Tat
 
-![fingerprint of Adaptive Tit For Tat](./assets/Adaptive Tit For Tat.png)
+![fingerprint of Adaptive Tit For Tat](./assets/Adaptive_Tit_For_Tat.png)
     
 
 ## Aggravater
@@ -48,7 +48,7 @@ fp.plot()
 
 ## Alternator Hunter
 
-![fingerprint of Alternator Hunter](./assets/Alternator Hunter.png)
+![fingerprint of Alternator Hunter](./assets/Alternator_Hunter.png)
     
 
 ## AntiCycler
@@ -58,17 +58,17 @@ fp.plot()
 
 ## Anti Tit For Tat
 
-![fingerprint of Anti Tit For Tat](./assets/Anti Tit For Tat.png)
+![fingerprint of Anti Tit For Tat](./assets/Anti_Tit_For_Tat.png)
     
 
 ## Adapative Pavlov 2006
 
-![fingerprint of Adapative Pavlov 2006](./assets/Adapative Pavlov 2006.png)
+![fingerprint of Adapative Pavlov 2006](./assets/Adapative_Pavlov_2006.png)
     
 
 ## Adapative Pavlov 2011
 
-![fingerprint of Adapative Pavlov 2011](./assets/Adapative Pavlov 2011.png)
+![fingerprint of Adapative Pavlov 2011](./assets/Adapative_Pavlov_2011.png)
     
 
 ## Appeaser
@@ -78,12 +78,12 @@ fp.plot()
 
 ## Arrogant QLearner
 
-![fingerprint of Arrogant QLearner](./assets/Arrogant QLearner.png)
+![fingerprint of Arrogant QLearner](./assets/Arrogant_QLearner.png)
     
 
 ## Average Copier
 
-![fingerprint of Average Copier](./assets/Average Copier.png)
+![fingerprint of Average Copier](./assets/Average_Copier.png)
     
 
 ## BackStabber
@@ -103,7 +103,7 @@ fp.plot()
 
 ## Cautious QLearner
 
-![fingerprint of Cautious QLearner](./assets/Cautious QLearner.png)
+![fingerprint of Cautious QLearner](./assets/Cautious_QLearner.png)
     
 
 ## Champion
@@ -113,7 +113,7 @@ fp.plot()
 
 ## Contrite Tit For Tat
 
-![fingerprint of Contrite Tit For Tat](./assets/Contrite Tit For Tat.png)
+![fingerprint of Contrite Tit For Tat](./assets/Contrite_Tit_For_Tat.png)
     
 
 ## Cooperator
@@ -123,42 +123,42 @@ fp.plot()
 
 ## Cooperator Hunter
 
-![fingerprint of Cooperator Hunter](./assets/Cooperator Hunter.png)
+![fingerprint of Cooperator Hunter](./assets/Cooperator_Hunter.png)
     
 
 ## Cycle Hunter
 
-![fingerprint of Cycle Hunter](./assets/Cycle Hunter.png)
+![fingerprint of Cycle Hunter](./assets/Cycle_Hunter.png)
     
 
 ## Cycler CCCCCD
 
-![fingerprint of Cycler CCCCCD](./assets/Cycler CCCCCD.png)
+![fingerprint of Cycler CCCCCD](./assets/Cycler_CCCCCD.png)
     
 
 ## Cycler CCCD
 
-![fingerprint of Cycler CCCD](./assets/Cycler CCCD.png)
+![fingerprint of Cycler CCCD](./assets/Cycler_CCCD.png)
     
 
 ## Cycler CCD
 
-![fingerprint of Cycler CCD](./assets/Cycler CCD.png)
+![fingerprint of Cycler CCD](./assets/Cycler_CCD.png)
     
 
 ## Cycler DC
 
-![fingerprint of Cycler DC](./assets/Cycler DC.png)
+![fingerprint of Cycler DC](./assets/Cycler_DC.png)
     
 
 ## Cycler DDC
 
-![fingerprint of Cycler DDC](./assets/Cycler DDC.png)
+![fingerprint of Cycler DDC](./assets/Cycler_DDC.png)
     
 
 ## Cycler CCCDCD
 
-![fingerprint of Cycler CCCDCD](./assets/Cycler CCCDCD.png)
+![fingerprint of Cycler CCCDCD](./assets/Cycler_CCCDCD.png)
     
 
 ## Davis
@@ -173,7 +173,7 @@ fp.plot()
 
 ## Defector Hunter
 
-![fingerprint of Defector Hunter](./assets/Defector Hunter.png)
+![fingerprint of Defector Hunter](./assets/Defector_Hunter.png)
     
 
 ## Desperate
@@ -203,7 +203,7 @@ fp.plot()
 
 ## Eventual Cycle Hunter
 
-![fingerprint of Eventual Cycle Hunter](./assets/Eventual Cycle Hunter.png)
+![fingerprint of Eventual Cycle Hunter](./assets/Eventual_Cycle_Hunter.png)
     
 
 ## EvolvedANN
@@ -223,27 +223,27 @@ fp.plot()
 
 ## Firm But Fair
 
-![fingerprint of Firm But Fair](./assets/Firm But Fair.png)
+![fingerprint of Firm But Fair](./assets/Firm_But_Fair.png)
     
 
 ## Fool Me Forever
 
-![fingerprint of Fool Me Forever](./assets/Fool Me Forever.png)
+![fingerprint of Fool Me Forever](./assets/Fool_Me_Forever.png)
     
 
 ## Fool Me Once
 
-![fingerprint of Fool Me Once](./assets/Fool Me Once.png)
+![fingerprint of Fool Me Once](./assets/Fool_Me_Once.png)
     
 
 ## Forgetful Fool Me Once
 
-![fingerprint of Forgetful Fool Me Once](./assets/Forgetful Fool Me Once.png)
+![fingerprint of Forgetful Fool Me Once](./assets/Forgetful_Fool_Me_Once.png)
     
 
 ## Forgetful Grudger
 
-![fingerprint of Forgetful Grudger](./assets/Forgetful Grudger.png)
+![fingerprint of Forgetful Grudger](./assets/Forgetful_Grudger.png)
     
 
 ## Forgiver
@@ -253,7 +253,7 @@ fp.plot()
 
 ## Forgiving Tit For Tat
 
-![fingerprint of Forgiving Tit For Tat](./assets/Forgiving Tit For Tat.png)
+![fingerprint of Forgiving Tit For Tat](./assets/Forgiving_Tit_For_Tat.png)
     
 
 ## Fortress3
@@ -268,7 +268,7 @@ fp.plot()
 
 ## PSO Gambler
 
-![fingerprint of PSO Gambler](./assets/PSO Gambler.png)
+![fingerprint of PSO Gambler](./assets/PSO_Gambler.png)
     
 
 ## GTFT
@@ -278,32 +278,32 @@ fp.plot()
 
 ## Go By Marjority
 
-![fingerprint of Go By Marjority](./assets/Go By Marjority.png)
+![fingerprint of Go By Marjority](./assets/Go_By_Marjority.png)
     
 
 ## Go By Majority 10
 
-![fingerprint of Go By Majority 10](./assets/Go By Majority 10.png)
+![fingerprint of Go By Majority 10](./assets/Go_By_Majority_10.png)
     
 
 ## Go By Majority 20
 
-![fingerprint of Go By Majority 20](./assets/Go By Majority 20.png)
+![fingerprint of Go By Majority 20](./assets/Go_By_Majority_20.png)
     
 
 ## Go By Majority 40
 
-![fingerprint of Go By Majority 40](./assets/Go By Majority 40.png)
+![fingerprint of Go By Majority 40](./assets/Go_By_Majority_40.png)
     
 
 ## Go By Majority 5
 
-![fingerprint of Go By Majority 5](./assets/Go By Majority 5.png)
+![fingerprint of Go By Majority 5](./assets/Go_By_Majority_5.png)
     
 
 ## $\phi$
 
-![fingerprint of $\phi$](./assets/$\phi$.png)
+![fingerprint of $\phi$](./assets/phi.png)
     
 
 ## Gradual
@@ -313,7 +313,7 @@ fp.plot()
 
 ## Gradual Killer
 
-![fingerprint of Gradual Killer](./assets/Gradual Killer.png)
+![fingerprint of Gradual Killer](./assets/Gradual_Killer.png)
     
 
 ## Grofman
@@ -343,47 +343,47 @@ fp.plot()
 
 ## Hard Go By Majority
 
-![fingerprint of Hard Go By Majority](./assets/Hard Go By Majority.png)
+![fingerprint of Hard Go By Majority](./assets/Hard_Go_By_Majority.png)
     
 
 ## Hard Go By Majority 10
 
-![fingerprint of Hard Go By Majority 10](./assets/Hard Go By Majority 10.png)
+![fingerprint of Hard Go By Majority 10](./assets/Hard_Go_By_Majority_10.png)
     
 
 ## Hard Go By Majority 20
 
-![fingerprint of Hard Go By Majority 20](./assets/Hard Go By Majority 20.png)
+![fingerprint of Hard Go By Majority 20](./assets/Hard_Go_By_Majority_20.png)
     
 
 ## Hard Go By Majority 40
 
-![fingerprint of Hard Go By Majority 40](./assets/Hard Go By Majority 40.png)
+![fingerprint of Hard Go By Majority 40](./assets/Hard_Go_By_Majority_40.png)
     
 
 ## Hard Go By Majority 5
 
-![fingerprint of Hard Go By Majority 5](./assets/Hard Go By Majority 5.png)
+![fingerprint of Hard Go By Majority 5](./assets/Hard_Go_By_Majority_5.png)
     
 
 ## Hard Prober
 
-![fingerprint of Hard Prober](./assets/Hard Prober.png)
+![fingerprint of Hard Prober](./assets/Hard_Prober.png)
     
 
 ## Hard Tit For 2 Tats
 
-![fingerprint of Hard Tit For 2 Tats](./assets/Hard Tit For 2 Tats.png)
+![fingerprint of Hard Tit For 2 Tats](./assets/Hard_Tit_For_2_Tats.png)
     
 
 ## Hard Tit For Tat
 
-![fingerprint of Hard Tit For Tat](./assets/Hard Tit For Tat.png)
+![fingerprint of Hard Tit For Tat](./assets/Hard_Tit_For_Tat.png)
     
 
 ## Hesitant QLearner
 
-![fingerprint of Hesitant QLearner](./assets/Hesitant QLearner.png)
+![fingerprint of Hesitant QLearner](./assets/Hesitant_QLearner.png)
     
 
 ## Hopeless
@@ -398,7 +398,7 @@ fp.plot()
 
 ## Inverse Punisher
 
-![fingerprint of Inverse Punisher](./assets/Inverse Punisher.png)
+![fingerprint of Inverse Punisher](./assets/Inverse_Punisher.png)
     
 
 ## Joss
@@ -408,32 +408,32 @@ fp.plot()
 
 ## Knowledgeable Worse and Worse
 
-![fingerprint of Knowledgeable Worse and Worse](./assets/Knowledgeable Worse and Worse.png)
+![fingerprint of Knowledgeable Worse and Worse](./assets/Knowledgeable_Worse_and_Worse.png)
     
 
 ## Limited Retaliate
 
-![fingerprint of Limited Retaliate](./assets/Limited Retaliate.png)
+![fingerprint of Limited Retaliate](./assets/Limited_Retaliate.png)
     
 
 ## Limited Retaliate 2
 
-![fingerprint of Limited Retaliate 2](./assets/Limited Retaliate 2.png)
+![fingerprint of Limited Retaliate 2](./assets/Limited_Retaliate_2.png)
     
 
 ## Limited Retaliate 3
 
-![fingerprint of Limited Retaliate 3](./assets/Limited Retaliate 3.png)
+![fingerprint of Limited Retaliate 3](./assets/Limited_Retaliate_3.png)
     
 
 ## Math Constant Hunter
 
-![fingerprint of Math Constant Hunter](./assets/Math Constant Hunter.png)
+![fingerprint of Math Constant Hunter](./assets/Math_Constant_Hunter.png)
     
 
 ## Naive Prober
 
-![fingerprint of Naive Prober](./assets/Naive Prober.png)
+![fingerprint of Naive Prober](./assets/Naive_Prober.png)
     
 
 ## Negation
@@ -443,7 +443,7 @@ fp.plot()
 
 ## Nice Average Copier
 
-![fingerprint of Nice Average Copier](./assets/Nice Average Copier.png)
+![fingerprint of Nice Average Copier](./assets/Nice_Average_Copier.png)
     
 
 ## Nydegger
@@ -453,22 +453,22 @@ fp.plot()
 
 ## Omega TFT
 
-![fingerprint of Omega TFT](./assets/Omega TFT.png)
+![fingerprint of Omega TFT](./assets/Omega_TFT.png)
     
 
 ## Once Bitten
 
-![fingerprint of Once Bitten](./assets/Once Bitten.png)
+![fingerprint of Once Bitten](./assets/Once_Bitten.png)
     
 
 ## Opposite Grudger
 
-![fingerprint of Opposite Grudger](./assets/Opposite Grudger.png)
+![fingerprint of Opposite Grudger](./assets/Opposite_Grudger.png)
     
 
 ## $\pi$
 
-![fingerprint of $\pi$](./assets/$\pi$.png)
+![fingerprint of $\pi$](./assets/pi.png)
     
 
 ## Predator
@@ -483,17 +483,17 @@ fp.plot()
 
 ## Prober 2
 
-![fingerprint of Prober 2](./assets/Prober 2.png)
+![fingerprint of Prober 2](./assets/Prober_2.png)
     
 
 ## Prober 3
 
-![fingerprint of Prober 3](./assets/Prober 3.png)
+![fingerprint of Prober 3](./assets/Prober_3.png)
     
 
 ## Prober 4
 
-![fingerprint of Prober 4](./assets/Prober 4.png)
+![fingerprint of Prober 4](./assets/Prober_4.png)
     
 
 ## Punisher
@@ -513,12 +513,12 @@ fp.plot()
 
 ## Random Hunter
 
-![fingerprint of Random Hunter](./assets/Random Hunter.png)
+![fingerprint of Random Hunter](./assets/Random_Hunter.png)
     
 
 ## Remorseful Prober
 
-![fingerprint of Remorseful Prober](./assets/Remorseful Prober.png)
+![fingerprint of Remorseful Prober](./assets/Remorseful_Prober.png)
     
 
 ## Retaliate
@@ -528,12 +528,12 @@ fp.plot()
 
 ## Retaliate 2
 
-![fingerprint of Retaliate 2](./assets/Retaliate 2.png)
+![fingerprint of Retaliate 2](./assets/Retaliate_2.png)
     
 
 ## Retaliate 3
 
-![fingerprint of Retaliate 3](./assets/Retaliate 3.png)
+![fingerprint of Retaliate 3](./assets/Retaliate_3.png)
     
 
 ## Ripoff
@@ -543,7 +543,7 @@ fp.plot()
 
 ## Risky QLearner
 
-![fingerprint of Risky QLearner](./assets/Risky QLearner.png)
+![fingerprint of Risky QLearner](./assets/Risky_QLearner.png)
     
 
 ## Shubik
@@ -553,22 +553,22 @@ fp.plot()
 
 ## Slow Tit For Two Tats
 
-![fingerprint of Slow Tit For Two Tats](./assets/Slow Tit For Two Tats.png)
+![fingerprint of Slow Tit For Two Tats](./assets/Slow_Tit_For_Two_Tats.png)
     
 
 ## Sneaky Tit For Tat
 
-![fingerprint of Sneaky Tit For Tat](./assets/Sneaky Tit For Tat.png)
+![fingerprint of Sneaky Tit For Tat](./assets/Sneaky_Tit_For_Tat.png)
     
 
 ## Soft Grudger
 
-![fingerprint of Soft Grudger](./assets/Soft Grudger.png)
+![fingerprint of Soft Grudger](./assets/Soft_Grudger.png)
     
 
 ## Soft Joss
 
-![fingerprint of Soft Joss](./assets/Soft Joss.png)
+![fingerprint of Soft Joss](./assets/Soft_Joss.png)
     
 
 ## SolutionB1
@@ -583,22 +583,22 @@ fp.plot()
 
 ## Spiteful Tit For Tat
 
-![fingerprint of Spiteful Tit For Tat](./assets/Spiteful Tit For Tat.png)
+![fingerprint of Spiteful Tit For Tat](./assets/Spiteful_Tit_For_Tat.png)
     
 
 ## Stochastic Cooperator
 
-![fingerprint of Stochastic Cooperator](./assets/Stochastic Cooperator.png)
+![fingerprint of Stochastic Cooperator](./assets/Stochastic_Cooperator.png)
     
 
 ## Stochastic WSLS
 
-![fingerprint of Stochastic WSLS](./assets/Stochastic WSLS.png)
+![fingerprint of Stochastic WSLS](./assets/Stochastic_WSLS.png)
     
 
 ## Suspicious Tit For Tat
 
-![fingerprint of Suspicious Tit For Tat](./assets/Suspicious Tit For Tat.png)
+![fingerprint of Suspicious Tit For Tat](./assets/Suspicious_Tit_For_Tat.png)
     
 
 ## Tester
@@ -623,22 +623,22 @@ fp.plot()
 
 ## Tit For Tat
 
-![fingerprint of Tit For Tat](./assets/Tit For Tat.png)
+![fingerprint of Tit For Tat](./assets/Tit_For_Tat.png)
     
 
 ## Tit For 2 Tats
 
-![fingerprint of Tit For 2 Tats](./assets/Tit For 2 Tats.png)
+![fingerprint of Tit For 2 Tats](./assets/Tit_For_2_Tats.png)
     
 
 ## Tricky Cooperator
 
-![fingerprint of Tricky Cooperator](./assets/Tricky Cooperator.png)
+![fingerprint of Tricky Cooperator](./assets/Tricky_Cooperator.png)
     
 
 ## Tricky Defector
 
-![fingerprint of Tricky Defector](./assets/Tricky Defector.png)
+![fingerprint of Tricky Defector](./assets/Tricky_Defector.png)
     
 
 ## Tullock
@@ -648,7 +648,7 @@ fp.plot()
 
 ## Two Tits For Tat
 
-![fingerprint of Two Tits For Tat](./assets/Two Tits For Tat.png)
+![fingerprint of Two Tits For Tat](./assets/Two_Tits_For_Tat.png)
     
 
 ## Willing
@@ -658,17 +658,17 @@ fp.plot()
 
 ## Win-Shift Lose-Stay
 
-![fingerprint of Win-Shift Lose-Stay](./assets/Win-Shift Lose-Stay.png)
+![fingerprint of Win-Shift Lose-Stay](./assets/Win-Shift_Lose-Stay.png)
     
 
 ## Win-Stay Lose-Shift
 
-![fingerprint of Win-Stay Lose-Shift](./assets/Win-Stay Lose-Shift.png)
+![fingerprint of Win-Stay Lose-Shift](./assets/Win-Stay_Lose-Shift.png)
     
 
 ## Worse and Worse
 
-![fingerprint of Worse and Worse](./assets/Worse and Worse.png)
+![fingerprint of Worse and Worse](./assets/Worse_and_Worse.png)
     
 
 ## ZD-Extort-2
@@ -678,7 +678,7 @@ fp.plot()
 
 ## ZD-Extort-2 v2
 
-![fingerprint of ZD-Extort-2 v2](./assets/ZD-Extort-2 v2.png)
+![fingerprint of ZD-Extort-2 v2](./assets/ZD-Extort-2_v2.png)
     
 
 ## ZD-Extort-4
@@ -703,65 +703,65 @@ fp.plot()
 
 ## $e$
 
-![fingerprint of $e$](./assets/$e$.png)
+![fingerprint of $e$](./assets/e.png)
     
 
 ## Meta Hunter
 
-![fingerprint of Meta Hunter](./assets/Meta Hunter.png)
+![fingerprint of Meta Hunter](./assets/Meta_Hunter.png)
     
 
 ## Meta Majority
 
-![fingerprint of Meta Majority](./assets/Meta Majority.png)
+![fingerprint of Meta Majority](./assets/Meta_Majority.png)
     
 
 ## Meta Minority
 
-![fingerprint of Meta Minority](./assets/Meta Minority.png)
+![fingerprint of Meta Minority](./assets/Meta_Minority.png)
     
 
 ## Meta Winner
 
-![fingerprint of Meta Winner](./assets/Meta Winner.png)
+![fingerprint of Meta Winner](./assets/Meta_Winner.png)
     
 
 ## Meta Majority Memory One
 
-![fingerprint of Meta Majority Memory One](./assets/Meta Majority Memory One.png)
+![fingerprint of Meta Majority Memory One](./assets/Meta_Majority_Memory_One.png)
     
 
 ## Meta Winner Memory One
 
-![fingerprint of Meta Winner Memory One](./assets/Meta Winner Memory One.png)
+![fingerprint of Meta Winner Memory One](./assets/Meta_Winner_Memory_One.png)
     
 
 ## Meta Majority Finite Memory
 
-![fingerprint of Meta Majority Finite Memory](./assets/Meta Majority Finite Memory.png)
+![fingerprint of Meta Majority Finite Memory](./assets/Meta_Majority_Finite_Memory.png)
     
 
 ## Meta Winner Finite Memory
 
-![fingerprint of Meta Winner Finite Memory](./assets/Meta Winner Finite Memory.png)
+![fingerprint of Meta Winner Finite Memory](./assets/Meta_Winner_Finite_Memory.png)
     
 
 ## Meta Majority Long Memory
 
-![fingerprint of Meta Majority Long Memory](./assets/Meta Majority Long Memory.png)
+![fingerprint of Meta Majority Long Memory](./assets/Meta_Majority_Long_Memory.png)
     
 
 ## Meta Winner Long Memory
 
-![fingerprint of Meta Winner Long Memory](./assets/Meta Winner Long Memory.png)
+![fingerprint of Meta Winner Long Memory](./assets/Meta_Winner_Long_Memory.png)
     
 
 ## Meta Mixer
 
-![fingerprint of Meta Mixer](./assets/Meta Mixer.png)
+![fingerprint of Meta Mixer](./assets/Meta_Mixer.png)
     
 
 ## Meta Winner Ensemble
 
-![fingerprint of Meta Winner Ensemble](./assets/Meta Winner Ensemble.png)
+![fingerprint of Meta Winner Ensemble](./assets/Meta_Winner_Ensemble.png)
     
