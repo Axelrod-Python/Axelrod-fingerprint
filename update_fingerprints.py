@@ -41,13 +41,14 @@ def read_db(filename="db.csv"):
         str_to_hash = {row[0]: row[1] for row in csvreader}
     return str_to_hash
 
-def obtain_fingerprint(strategy, probe=axl.TitForTat):
+def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     """
 	Obtain the fingerprint for a given strategy and save the figure to the
     assets dir
     """
     fp = axl.AshlockFingerprint(strategy, probe)
-    fp.fingerprint(progress_bar=False, processes=0)
+    fp.fingerprint(turns=turns, repetitions=repetitions,
+                   progress_bar=False, processes=0)
     plot = fp.plot()
     plot.savefig("assets/{}.png".format(strategy.name))
 
@@ -64,7 +65,7 @@ def write_markdown(strategy):
     """.format(strategy.name, strategy.name, strategy.name)
     return markdown
 
-def main():
+def main(turns, repetitions):
     """
     Fingerprint all strategies, if a strategy has already been fingerprinted it
     does not get rerun.
@@ -89,16 +90,16 @@ Each individual fingerprint can be obtained by running:
 ```python
 import axelrod as axl
 fp = axl.AshlockFingerprint(strategy, probe)
-fp.fingerprint()
+fp.fingerprint(turns={}, repetitions={})
 fp.plot()
 ```
-    """.format(version)
+    """.format(version, turns, repetitions)
 
     db = read_db()
     for strategy in axl.strategies:
         name = strategy.name
         if name not in db or db[name] != hash_strategy(strategy):
-            obtain_fingerprint(strategy)
+            obtain_fingerprint(strategy, turns, repetitions)
             write_strategy_to_db(strategy)
         markdown += write_markdown(strategy)
 
@@ -107,4 +108,5 @@ fp.plot()
 
 
 if __name__ == "__main__":
-    main()
+    turns, repetitions = 200, 100
+    main(turns, repetitions)
