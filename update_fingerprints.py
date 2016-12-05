@@ -11,6 +11,7 @@ then the fingerprint is regenerated for that strategy.
 import inspect
 import hashlib
 import csv
+import string
 
 import axelrod as axl
 
@@ -50,7 +51,25 @@ def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     fp.fingerprint(turns=turns, repetitions=repetitions,
                    progress_bar=False, processes=0)
     plot = fp.plot()
-    plot.savefig("assets/{}.png".format(strategy.name))
+    plot.savefig("assets/{}.png".format(format_filename(strategy.name)))
+
+def format_filename(s):
+    """
+    Take a string and return a valid filename constructed from the string.
+    Uses a whitelist approach: any characters not present in valid_chars are
+    removed. Also spaces are replaced with underscores.
+
+    Note: this method may produce invalid filenames such as ``, `.` or `..`
+    When I use this method I prepend a date string like '2009_01_15_19_46_32_'
+    and append a file extension like '.txt', so I avoid the potential of using
+    an invalid filename.
+
+    Borrowed from https://gist.github.com/seanh/93666
+    """
+    valid_chars = "-_.() {}{}".format(string.ascii_letters, string.digits)
+    filename = ''.join(c for c in s if c in valid_chars)
+    filename = filename.replace(' ','_')
+    return filename
 
 def write_markdown(strategy):
     """
@@ -59,10 +78,10 @@ def write_markdown(strategy):
     """
     markdown = """
 
-## {}
+## {0}
 
-![fingerprint of {}](./assets/{}.png)
-    """.format(strategy.name, strategy.name, strategy.name)
+![fingerprint of {0}](./assets/{1}.png)
+    """.format(strategy.name, format_filename(strategy.name))
     return markdown
 
 def main(turns, repetitions):
