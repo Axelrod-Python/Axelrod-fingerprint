@@ -42,6 +42,19 @@ def read_db(filename="db.csv"):
         str_to_hash = {row[0]: row[1] for row in csvreader}
     return str_to_hash
 
+def write_data_to_file(fp, filename):
+    """
+    Write the fingerprint data to a file.
+    """
+    columns = ['x', 'y', 'score']
+
+    with open(filename, 'w') as f:
+        w = csv.writer(f)
+        w.writerow(columns)
+        for key, value in fp.data.items():
+            w.writerow([key.x, key.y, value])
+
+
 def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     """
 	Obtain the fingerprint for a given strategy and save the figure to the
@@ -52,6 +65,8 @@ def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
                    progress_bar=False, processes=0)
     plot = fp.plot()
     plot.savefig("assets/{}.png".format(format_filename(strategy.name)))
+    write_data_to_file(fp,
+                       "assets/{}.csv".format(format_filename(strategy.name)))
 
 def format_filename(s):
     """
@@ -81,6 +96,8 @@ def write_markdown(strategy):
 ## {0}
 
 ![fingerprint of {0}](./assets/{1}.png)
+
+[data (csv)](./assets/{1}.csv)
     """.format(strategy.name, format_filename(strategy.name))
     return markdown
 
