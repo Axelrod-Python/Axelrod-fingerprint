@@ -19,7 +19,10 @@ def hash_strategy(strategy):
     """
     Hash the source code of a strategy
     """
-    source_code = "".join(inspect.getsourcelines(strategy)[0])
+    try:
+        source_code = "".join(inspect.getsourcelines(strategy)[0])
+    except OSError:  # Some classes are dynamically created
+        source_code = "".join(inspect.getsourcelines(strategy.strategy)[0])
     hash_object = hashlib.md5(source_code.encode('utf-8'))
     hashed_source = hash_object.hexdigest()
     return hashed_source
@@ -134,7 +137,8 @@ fp.plot()
     db = read_db()
     for strategy in axl.strategies:
         name = strategy.name
-        if name not in db or db[name] != hash_strategy(strategy):
+        signature = hash_strategy(strategy)
+        if name not in db or db[name] != signature:
             obtain_fingerprint(strategy, turns, repetitions)
             write_strategy_to_db(strategy)
         markdown += write_markdown(strategy)
