@@ -1,4 +1,4 @@
-Adaptive,9939131a4d4f0405553632b2463a3492
+Adaptive,1b3e610de148c704b1c2ba6b5885d7d4
 Adaptive Tit For Tat,f5928f6e3e7a2951fbe01adec7c56103
 Aggravater,6d129b4a5029c4c7412c1b285bcb8bd0
 ALLCorALLD,62a5a10b58f606a13345a2c95cd51e56
@@ -11,6 +11,7 @@ Adapative Pavlov 2011,9ea8ea8ddcbc6911dbfbf4baccd120a8
 Appeaser,1c757ee7340980329765fe52fc26cbc3
 Arrogant QLearner,4becad52ed4283f0c0b2afd53cd94167
 Average Copier,b972760b5cb5591763d05171eb6fc9d9
+Better and Better,4988a819e5be3f7ff1162dd1362bad2d
 BackStabber,c9d083d18a322ab3ba3ef949a420fb28
 Bully,1fe252692fe662da470db57f0dff651d
 Calculator,a0a0205c76e359405c1e6d7908f2f142
@@ -32,7 +33,7 @@ Defector Hunter,63d0805721b454c71ed91270b410a390
 Desperate,418b81cba6c1df87948bcaad47b008d5
 DoubleCrosser,2340577236c0297d885332a39c91d537
 Doubler,ef3d9986ce8198dacf9bd51eeeee4027
-EasyGo,28ca4d1ab83493c3d39e8a9c3af868f1
+EasyGo,88542408ffc3d7fe5da5670b0f377f91
 Eatherley,bc335ffed185bf6dbf2c9ee43bdb5253
 Eventual Cycle Hunter,421727ddea4bd7a94451fff69b54ee28
 EvolvedANN,cbce47b73830a217a7cb64b0b26d90e8
@@ -42,7 +43,7 @@ Firm But Fair,e15f62d18e8226f6608a7aea713d49b0
 Fool Me Forever,6f84397c3aef7044af8a144f6e6c57c0
 Fool Me Once,a2e5754e39951bf1cf3700983be0e7b1
 Forgetful Fool Me Once,fa5321c09e74bfd6344c45f13c1630d2
-Forgetful Grudger,3f0381ebb7cb14fdc5d6d611dc64c402
+Forgetful Grudger,9620f240a9eae0a5cb73ef9bf62dbd16
 Forgiver,9e52402b8d5d89001c4f0be0014b4004
 Forgiving Tit For Tat,9cdccc1939ee69e3d8964f408abd05d2
 Fortress3,18c5e22392c6645c0fac74bb6dc86f3f
@@ -59,7 +60,7 @@ Gradual,5e5d8b0c6f63847432674f812ee01705
 Gradual Killer,bf2ef88649512053180c8c2c31e4b3cd
 Grofman,ea5bb78166a5d5360b1401d03211f69e
 Grudger,afd659cd4a24f66b5f8cb11f7c298d14
-GrudgerAlternator,2bd46ebf80d92fd40f8c2079398eb7b2
+GrudgerAlternator,75cba6fcacd54e9c01490071fd534457
 Grumpy,3e27ac777669ef1ea85f03e7bf529790
 Handshake,f5daedde3a53e1916779f8bdd8278771
 Hard Go By Majority,7758e0397028b0fd95395f074577f128
@@ -75,7 +76,7 @@ Hopeless,b3a674476b9046dc6f544ec90b4df086
 Inverse,3bd6d1f44afc0a476ec3ba820f07a2a8
 Inverse Punisher,f020775732e00a76444b6501960decd2
 Joss,75a3e186bbf687ebaf521e319bd28893
-Knowledgeable Worse and Worse,f6fc900711402ea26082a2182ac62721
+Knowledgeable Worse and Worse,8c4d89ab4235d7f68b61ef6bbff14a04
 Limited Retaliate,a37019bed0777ca70927e0554ac32974
 Limited Retaliate 2,39116258e7217f437f7436d53d0c3851
 Limited Retaliate 3,f50bec4f48333c64ec8d6aff455b1a34
@@ -86,7 +87,7 @@ Nice Average Copier,51072240dbfdbe7732f5103cb9aa1ad8
 Nydegger,596d3c5cc090a98d65a4ea02f63e401d
 Omega TFT,366437fd77af0f55583c466aa63c0ff1
 Once Bitten,f87ef810aee690de11e87ef6c6ca5df3
-Opposite Grudger,bbf2d158aaa738840267723b9617c77f
+Opposite Grudger,2e9670d838845122af05a955ea0b0c5e
 $\pi$,31d49fdf36607662fa7c5c4afc0122a3
 Predator,066aef30e74c50f37a8b79404e1e97e3
 Prober,80a9b70eb70c6adbc37ba6f6d1b25867
@@ -95,7 +96,7 @@ Prober 3,2ff51d6f7d56dacf3984efe3ad314849
 Prober 4,963664e81cb9cd2f16fb03d517962f4b
 Punisher,e19c28dbbd6676f0b676d466c6c5b48f
 Raider,f0fca9d87f047e452b042ae0501c1f28
-Random,212036a01b9cf88aa4e7c3ce7f07abb4
+Random,053268efdf2a95c5b8af4140c8b739e7
 Random Hunter,af74621a1edc36a07ba70dc4f4779d2e
 Remorseful Prober,dc5711c021fd79d9a3ed021dd1937c1b
 Retaliate,0a451cdd0b03e2d6eaf7e9b3d9f7cb57
@@ -127,7 +128,9 @@ Two Tits For Tat,104ef942e67c969468463df46cd7225c
 Willing,b7eb98d1278467be1df71c6f51d8e3f5
 Win-Shift Lose-Stay,de41c222b276c4a86a9941e376c23a22
 Win-Stay Lose-Shift,4903aba2a1e0c94904ba9b1bc7daa77a
-Worse and Worse,32d0f8e0b8539f72e41a12b1360e20eb
+Worse and Worse,c77a4528b045ac27646f5a7323d07f1c
+Worse and Worse 2,f42929844680c97886981ef1b5104275
+Worse and Worse 3,c7e986a0a4fd61a562bd7d1d6aa644ad
 ZD-Extort-2,979e4a528ca38a747cf45e6d8b09758e
 ZD-Extort-2 v2,098334ef2751088bf9d572c3e8904c70
 ZD-Extort-4,a893d3fa752f38b2cba0d0d23b95e984
@@ -135,15 +138,40 @@ ZD-GTFT-2,4ccdfb389d1f156543b766ffb8ccf5dd
 ZD-GEN-2,3fe36e7b4945bc1129e6454e9f0b40b7
 ZD-SET-2,35052b381340e28ad2b284a9f5306244
 $e$,fb40f03ced74b73e50eac975eef1e476
-Meta Hunter,f7b149a4d47bc228f019978b87c0dc42
-Meta Majority,96f0255274c2ca6075fb3815bec44c4e
-Meta Minority,42718c11ae202fd21772496bf773d42c
-Meta Winner,f8c6276cee147e8b43062296bfdb1d92
-Meta Majority Memory One,ac2bc981f66d178d45536f652454cd81
-Meta Winner Memory One,158408f36133ebe37a2c7219ff9b6845
-Meta Majority Finite Memory,87ffdfe82e0c633b4066e9fc6a0ba050
-Meta Winner Finite Memory,76b9b75b90b531ac8909019a1634dd00
-Meta Majority Long Memory,6ca9162d7290cd1eb18677c17c18f200
-Meta Winner Long Memory,413a8e449af92390782cbc4b056a0a36
-Meta Mixer,df0b4910155bb51ef3bfcef3589f8f5c
-Meta Winner Ensemble,1ba5dc9c1094b8fa208de2958c346fc5
+Meta Hunter,98352810eb63a938ff1f86b64e47d0af
+Meta Hunter Aggressive,b7370d79a6f4bcc58cddc7174eb7abce
+Meta Majority,2042f0a95def29c637fcfda0ab6b698a
+Meta Majority Memory One,cf04c96bb2b9a0ea67f4ffa42720ed8e
+Meta Majority Finite Memory,55b2d70980f72bb3d9d07e0faca42eb9
+Meta Majority Long Memory,c6e3947e56c26673a0574dd4938e3a1f
+Meta Minority,de23592a12b4e6cfa7fb1b6e377f7901
+Adaptive Tit For Tat,bdf9c92b404a01d6ea2d1ab938f825c5
+CollectiveStrategy,ab4b1233f0cd396dea438e05f8272f05
+Fortress3,59c972153bb5b559918cf43954a96eeb
+Fortress4,607429ececbeab5649c5d02f7f4fb0d7
+Limited Retaliate,262c2f15d86e783c8934ec6c3db82273
+MEM2,10f155d6fe507a8151401cad4cece55a
+Predator,db4a53aba5c3bfa07d999044f29e7999
+Prober 4,c6569afd8f1b3a38280187b6d3996c9f
+Pun1,6131b1ec5492685cf4b3a72822e47533
+Raider,e2eb0ce6960bee2a6401c3ab6b89466e
+Remorseful Prober,734bd4cefbca19cd0cefa7ac4dabcc52
+Revised Downing,6fcf347e1587aedf362c6a780a85ba6b
+Ripoff,daeb82043c56e5a44a209b1cc32c420d
+SolutionB1,147e5cbee2e45beabe9da1956339a91e
+SolutionB5,c0700137e60f2e76cb49fb6511035846
+Thumper,dff20f0d5a8ce63267556112b92e3d05
+ZD-GTFT-2,d8047e5100affa89212cfd6262e45737
+Meta Mixer,1dc7cfe6f7f57faaaeaa3ef9f4acf3b6
+Meta Winner,2244dbd3155486fa46cad2ac86e294ab
+Meta Winner Deterministic,61d2ffee06dacae038d105e7fd2825d7
+Meta Winner Ensemble,b8a56d2fd349a90a7dc2c38e5e9f0ca1
+Meta Winner Memory One,bdac58345cded05f7ca4b290a23ffd41
+Meta Winner Finite Memory,86463c8bfe9fb5276c0340ca187da3b4
+Meta Winner Long Memory,ea7b720a7ea175f4a7e2b2940bbcd31e
+Evolved ANN,ac481e39e177e9a9ad082bdd68fcb1ee
+Evolved ANN 5,39d0d8a2987ba9e01a4a13d957d16acf
+Evolved ANN 5 Noise 05,245533f13c25569bbe6f5c810d599f41
+Evolved FSM 4,c766c74b5950f1339145822ca0840f78
+Evolved FSM 16,1681422e27717545f19c5024be58bf2d
+Evolved FSM 16 Noise 05,970161ed4534678ccb376875f02be146
