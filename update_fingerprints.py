@@ -15,6 +15,7 @@ import string
 
 import axelrod as axl
 
+
 def hash_strategy(strategy):
     """
     Hash the source code of a strategy
@@ -27,6 +28,7 @@ def hash_strategy(strategy):
     hashed_source = hash_object.hexdigest()
     return hashed_source
 
+
 def write_strategy_to_db(strategy, filename="db.csv"):
     """
     Write the hash of a strategy to the db
@@ -34,6 +36,7 @@ def write_strategy_to_db(strategy, filename="db.csv"):
     hashed_source = hash_strategy(strategy)
     with open(filename, "a") as db:
         db.write("{},{}\n".format(strategy.name, hashed_source))
+
 
 def read_db(filename="db.csv"):
     """
@@ -44,6 +47,16 @@ def read_db(filename="db.csv"):
         csvreader = csv.reader(db)
         str_to_hash = {row[0]: row[1] for row in csvreader}
     return str_to_hash
+
+
+def create_and_read_db(filename="db.csv"):
+    """
+    Creates an empty db.csv file and reads in using the read_db() function
+    """
+    with open(filename, "w"):
+        pass
+    return read_db()
+
 
 def write_data_to_file(fp, filename):
     """
@@ -60,7 +73,7 @@ def write_data_to_file(fp, filename):
 
 def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     """
-	Obtain the fingerprint for a given strategy and save the figure to the
+    Obtain the fingerprint for a given strategy and save the figure to the
     assets dir
     """
     fp = axl.AshlockFingerprint(strategy, probe)
@@ -70,6 +83,7 @@ def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     plot.savefig("assets/{}.png".format(format_filename(strategy.name)))
     write_data_to_file(fp,
                        "assets/{}.csv".format(format_filename(strategy.name)))
+
 
 def format_filename(s):
     """
@@ -89,6 +103,7 @@ def format_filename(s):
     filename = filename.replace(' ','_')
     return filename
 
+
 def write_markdown(strategy):
     """
     Write a markdown section of a strategy.
@@ -103,6 +118,7 @@ def write_markdown(strategy):
 [data (csv)](./assets/{1}.csv)
     """.format(strategy.name, format_filename(strategy.name))
     return markdown
+
 
 def main(turns, repetitions):
     """
@@ -133,8 +149,11 @@ fp.fingerprint(turns={}, repetitions={})
 fp.plot()
 ```
     """.format(version, turns, repetitions)
+    try:
+        db = read_db()
+    except FileNotFoundError:
+        db = create_and_read_db()
 
-    db = read_db()
     for strategy in axl.strategies:
         name = strategy.name
         signature = hash_strategy(strategy)
