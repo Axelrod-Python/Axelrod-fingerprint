@@ -49,13 +49,12 @@ def read_db(filename="db.csv"):
     return str_to_hash
 
 
-def create_and_read_db(filename="db.csv"):
+def create_db(filename="db.csv"):
     """
-    Creates an empty db.csv file and reads in using the read_db() function
+    Creates an empty db.csv file 
     """
     with open(filename, "w"):
         pass
-    return read_db()
 
 
 def write_data_to_file(fp, filename):
@@ -152,7 +151,8 @@ fp.plot()
     try:
         db = read_db()
     except FileNotFoundError:
-        db = create_and_read_db()
+        create_db()
+        db = read_db()
 
     for strategy in axl.strategies:
         name = strategy.name
