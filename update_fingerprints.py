@@ -51,7 +51,7 @@ def read_db(filename="db.csv"):
 
 def create_db(filename="db.csv"):
     """
-    Creates an empty db.csv file 
+    Creates an empty db.csv file
     """
     with open(filename, "w"):
         pass
@@ -129,7 +129,7 @@ def main(turns, repetitions):
     markdown = """# Ashlock fingerprints
 
 See:
-[axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting] (http://axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting)
+[axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting](http://axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting)
 
 All strategies included from Axelrod version {}.
 
