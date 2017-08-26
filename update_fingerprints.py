@@ -13,6 +13,9 @@ import hashlib
 import csv
 import string
 
+import numpy as np
+import matplotlib.pyplot as plt
+
 import axelrod as axl
 import axelrod_fortran as axlf
 
@@ -84,14 +87,49 @@ def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     fp = axl.AshlockFingerprint(strategy, probe)
     fp.fingerprint(turns=turns, repetitions=repetitions,
                    progress_bar=False, processes=0)
-    plot = fp.plot()
+    plt.figure()
+    fp.plot()
     try:
         name = strategy.original_name
     except AttributeError:
         name = strategy.name
-    plot.savefig("assets/{}.png".format(format_filename(name)))
+    plt.savefig("assets/{}.png".format(format_filename(name)))
     write_data_to_file(fp,
                        "assets/{}.csv".format(format_filename(name)))
+
+
+def obtain_transitive_fingerprint(strategy, turns, repetitions):
+    """
+    Obtain the transitive fingerprint (both default and against short run time)
+    for a given strategy and save the figure to the assets dir
+    """
+    fp = axl.TransitiveFingerprint(strategy)
+    fp.fingerprint(turns=turns, repetitions=repetitions,
+                   progress_bar=False, processes=0)
+    plt.figure()
+    fp.plot()
+    try:
+        name = strategy.original_name
+    except AttributeError:
+        name = strategy.name
+    plt.savefig("assets/transitive_{}.png".format(format_filename(name)))
+    np.savetxt("assets/transitive_{}.csv".format(format_filename(name)),
+               fp.data)
+
+    short_run_time = [s() for s in axl.short_run_time_strategies]
+    fp = axl.TransitiveFingerprint(strategy,
+                                   opponents=short_run_time)
+    fp.fingerprint(turns=turns, repetitions=repetitions,
+                   progress_bar=False, processes=0)
+    plt.figure()
+    fp.plot(display_names=True)
+    try:
+        name = strategy.original_name
+    except AttributeError:
+        name = strategy.name
+    plt.savefig("assets/transitive_v_short_{}.png".format(format_filename(name)))
+    np.savetxt("assets/transitive_v_{}.csv".format(format_filename(name)),
+               fp.data)
 
 
 def format_filename(s):
@@ -129,11 +167,19 @@ def write_markdown(strategy):
 ![fingerprint of {0}](./assets/{1}.png)
 
 [data (csv)](./assets/{1}.csv)
+
+![Transitive fingerprint of {0}](./assets/transitive_{1}.png)
+
+[data (csv)](./assets/transitive_{1}.csv)
+
+![Transitive fingerprint of {0} against short run time](./assets/transitive_v_short_{1}.png)
+
+[data (csv)](./assets/transitive_v_short_{1}.csv)
     """.format(name, format_filename(name))
     return markdown
 
 
-def main(turns, repetitions):
+def main(turns, repetitions, transitive_turns, transitive_repetitions):
     """
     Fingerprint all strategies, if a strategy has already been fingerprinted it
     does not get rerun.
@@ -141,7 +187,7 @@ def main(turns, repetitions):
     version = axl.__version__
     axlf_version = axlf.__version__
 
-    markdown = """# Ashlock fingerprints
+    markdown = """# Ashlock and transitive fingerprints
 
 See:
 [axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting](http://axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting)
@@ -173,11 +219,14 @@ fp.plot()
         create_db()
         db = read_db()
 
-    for strategy in axl.strategies:
+    for strategy in axl.strategies[:2]:
         name = strategy.name
         signature = hash_strategy(strategy)
         if name not in db or db[name] != signature:
-            obtain_fingerprint(strategy, turns, repetitions)
+        #    obtain_fingerprint(strategy, turns, repetitions)
+            obtain_transitive_fingerprint(strategy,
+                                          transitive_turns,
+                                          transitive_repetitions)
             write_strategy_to_db(strategy)
         markdown += write_markdown(strategy)
 
@@ -202,4 +251,5 @@ fp.plot()
 
 if __name__ == "__main__":
     turns, repetitions = 200, 100
-    main(turns, repetitions)
+    transitive_turns, transitive_repetitions = 200, 20000
+    main(turns, repetitions, transitive_turns, transitive_repetitions)
