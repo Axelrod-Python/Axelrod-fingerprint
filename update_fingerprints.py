@@ -93,7 +93,9 @@ def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
         name = strategy.original_name
     except AttributeError:
         name = strategy.name
-    plt.savefig("assets/{}.png".format(format_filename(name)))
+    plt.tight_layout()
+    plt.savefig("assets/{}.png".format(format_filename(name)),
+                bbox_inches="tight")
     write_data_to_file(fp,
                        "assets/{}.csv".format(format_filename(name)))
 
@@ -112,7 +114,9 @@ def obtain_transitive_fingerprint(strategy, turns, repetitions):
         name = strategy.original_name
     except AttributeError:
         name = strategy.name
-    plt.savefig("assets/transitive_{}.png".format(format_filename(name)))
+    plt.tight_layout()
+    plt.savefig("assets/transitive_{}.png".format(format_filename(name)),
+                bbox_inches="tight")
     np.savetxt("assets/transitive_{}.csv".format(format_filename(name)),
                fp.data)
 
@@ -127,7 +131,9 @@ def obtain_transitive_fingerprint(strategy, turns, repetitions):
         name = strategy.original_name
     except AttributeError:
         name = strategy.name
-    plt.savefig("assets/transitive_v_short_{}.png".format(format_filename(name)))
+    plt.tight_layout()
+    plt.savefig("assets/transitive_v_short_{}.png".format(format_filename(name)),
+                bbox_inches="tight")
     np.savetxt("assets/transitive_v_{}.csv".format(format_filename(name)),
                fp.data)
 
