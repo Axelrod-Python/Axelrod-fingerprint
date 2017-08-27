@@ -225,7 +225,7 @@ fp.plot()
         create_db()
         db = read_db()
 
-    for strategy in axl.strategies[:2]:
+    for strategy in axl.strategies:
         name = strategy.name
         signature = hash_strategy(strategy)
         if name not in db or db[name] != signature:
