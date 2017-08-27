@@ -248,6 +248,9 @@ fp.plot()
         signature = hash_strategy(player)
         if name not in db or db[name] != signature:
     #        obtain_fingerprint(player, turns, repetitions)
+            obtain_transitive_fingerprint(player,
+                                          transitive_turns,
+                                          transitive_repetitions)
             write_strategy_to_db(player)
         markdown += write_markdown(player)
 
