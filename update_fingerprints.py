@@ -140,7 +140,7 @@ def obtain_transitive_fingerprint_v_short(strategy, turns, repetitions):
     plt.tight_layout()
     plt.savefig("assets/transitive_v_short_{}.png".format(format_filename(name)),
                 bbox_inches="tight")
-    np.savetxt("assets/transitive_v_{}.csv".format(format_filename(name)),
+    np.savetxt("assets/transitive_v_short_{}.csv".format(format_filename(name)),
                fp.data)
 
 
