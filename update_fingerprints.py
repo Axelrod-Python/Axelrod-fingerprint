@@ -292,5 +292,5 @@ fp.plot()
 
 if __name__ == "__main__":
     turns, repetitions = 200, 100
-    transitive_turns, transitive_repetitions = 200, 10000
+    transitive_turns, transitive_repetitions = 200, 5000
     main(turns, repetitions, transitive_turns, transitive_repetitions)
