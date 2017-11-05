@@ -231,7 +231,7 @@ fp.plot()
         create_db()
         db = read_db()
 
-    for strategy in axl.strategies:
+    for strategy in axl.short_run_time_strategies:
         name = strategy.name
         signature = hash_strategy(strategy)
         fp = "Ashlock"
