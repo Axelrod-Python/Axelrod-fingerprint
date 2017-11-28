@@ -105,7 +105,7 @@ def obtain_transitive_fingerprint(strategy, turns, repetitions):
     Obtain the transitive fingerprint
     for a given strategy and save the figure to the assets dir
     """
-    fp = axl.TransitiveFingerprint(strategy)
+    fp = axl.TransitiveFingerprint(strategy, number_of_opponents=30)
     fp.fingerprint(turns=turns, repetitions=repetitions,
                    progress_bar=False, processes=0)
     plt.figure()
@@ -191,7 +191,9 @@ def write_markdown(strategy):
     return markdown
 
 
-def main(turns, repetitions, transitive_turns, transitive_repetitions):
+def main(turns, repetitions, 
+         transitive_turns, transitive_repetitions,
+         transitive_v_short_turns, transitive_v_short_repetitions):
     """
     Fingerprint all strategies, if a strategy has already been fingerprinted it
     does not get rerun.
@@ -249,8 +251,8 @@ fp.plot()
         fp = "Transitive_v_short"
         if (name, fp) not in db or db[name, fp] != signature:
             obtain_transitive_fingerprint_v_short(strategy,
-                                                  transitive_turns,
-                                                  transitive_repetitions)
+                                                  transitive_v_short_turns,
+                                                  transitive_v_short_repetitions)
             write_strategy_to_db(strategy, fingerprint=fp)
 
         markdown += write_markdown(strategy)
@@ -292,5 +294,8 @@ fp.plot()
 
 if __name__ == "__main__":
     turns, repetitions = 200, 100
-    transitive_turns, transitive_repetitions = 200, 5000
-    main(turns, repetitions, transitive_turns, transitive_repetitions)
+    transitive_turns, transitive_repetitions = 200, 100
+    transitive_v_short_turns, transitive_v_short_repetitions = 200, 500
+    main(turns, repetitions,
+         transitive_turns, transitive_repetitions,
+         transitive_v_short_turns, transitive_v_short_repetitions)
