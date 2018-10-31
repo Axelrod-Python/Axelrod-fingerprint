@@ -17,7 +17,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import axelrod as axl
-import axelrod_fortran as axlf
 
 
 def hash_strategy(strategy):
@@ -28,9 +27,7 @@ def hash_strategy(strategy):
         source_code = "".join(inspect.getsourcelines(strategy)[0])
     except OSError:  # Some classes are dynamically created
         source_code = "".join(inspect.getsourcelines(strategy.strategy)[0])
-    except TypeError:  # For the fortran strategies a player instance is passed
-        source_code = "".join(strategy.original_name)
-    hash_object = hashlib.md5(source_code.encode('utf-8'))
+    hash_object = hashlib.md5(source_code.encode("utf-8"))
     hashed_source = hash_object.hexdigest()
     return hashed_source
 
@@ -42,9 +39,15 @@ def write_strategy_to_db(strategy, filename="db.csv", fingerprint="Ashlock"):
     hashed_source = hash_strategy(strategy)
     with open(filename, "a") as db:
         try:
-            db.write("{},{},{}\n".format(strategy.original_name, fingerprint, hashed_source))
+            db.write(
+                "{},{},{}\n".format(
+                    strategy.original_name, fingerprint, hashed_source
+                )
+            )
         except AttributeError:
-            db.write("{},{},{}\n".format(strategy.name, fingerprint, hashed_source))
+            db.write(
+                "{},{},{}\n".format(strategy.name, fingerprint, hashed_source)
+            )
 
 
 def read_db(filename="db.csv"):
@@ -70,23 +73,29 @@ def write_data_to_file(fp, filename):
     """
     Write the fingerprint data to a file.
     """
-    columns = ['x', 'y', 'score']
+    columns = ["x", "y", "score"]
 
-    with open(filename, 'w') as f:
+    with open(filename, "w") as f:
         w = csv.writer(f)
         w.writerow(columns)
         for key, value in fp.data.items():
             w.writerow([key.x, key.y, value])
 
 
-def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
+def obtain_fingerprint(
+    strategy, turns, repetitions, probe=axl.TitForTat, processes=1
+):
     """
     Obtain the fingerprint for a given strategy and save the figure to the
     assets dir
     """
     fp = axl.AshlockFingerprint(strategy, probe)
-    fp.fingerprint(turns=turns, repetitions=repetitions,
-                   progress_bar=False, processes=0)
+    fp.fingerprint(
+        turns=turns,
+        repetitions=repetitions,
+        progress_bar=False,
+        processes=processes,
+    )
     plt.figure()
     fp.plot()
     try:
@@ -94,20 +103,24 @@ def obtain_fingerprint(strategy, turns, repetitions, probe=axl.TitForTat):
     except AttributeError:
         name = strategy.name
     plt.tight_layout()
-    plt.savefig("assets/{}.png".format(format_filename(name)),
-                bbox_inches="tight")
-    write_data_to_file(fp,
-                       "assets/{}.csv".format(format_filename(name)))
+    plt.savefig(
+        "assets/{}.png".format(format_filename(name)), bbox_inches="tight"
+    )
+    write_data_to_file(fp, "assets/{}.csv".format(format_filename(name)))
 
 
-def obtain_transitive_fingerprint(strategy, turns, repetitions):
+def obtain_transitive_fingerprint(strategy, turns, repetitions, processes=1):
     """
     Obtain the transitive fingerprint
     for a given strategy and save the figure to the assets dir
     """
     fp = axl.TransitiveFingerprint(strategy, number_of_opponents=30)
-    fp.fingerprint(turns=turns, repetitions=repetitions,
-                   progress_bar=False, processes=0)
+    fp.fingerprint(
+        turns=turns,
+        repetitions=repetitions,
+        progress_bar=False,
+        processes=processes,
+    )
     plt.figure()
     fp.plot()
     try:
@@ -115,22 +128,30 @@ def obtain_transitive_fingerprint(strategy, turns, repetitions):
     except AttributeError:
         name = strategy.name
     plt.tight_layout()
-    plt.savefig("assets/transitive_{}.png".format(format_filename(name)),
-                bbox_inches="tight")
-    np.savetxt("assets/transitive_{}.csv".format(format_filename(name)),
-               fp.data)
+    plt.savefig(
+        "assets/transitive_{}.png".format(format_filename(name)),
+        bbox_inches="tight",
+    )
+    np.savetxt(
+        "assets/transitive_{}.csv".format(format_filename(name)), fp.data
+    )
 
 
-def obtain_transitive_fingerprint_v_short(strategy, turns, repetitions):
+def obtain_transitive_fingerprint_v_short(
+    strategy, turns, repetitions, processes=1
+):
     """
     Obtain the transitive fingerprint against short run time
     for a given strategy and save the figure to the assets dir
     """
     short_run_time = [s() for s in axl.short_run_time_strategies]
-    fp = axl.TransitiveFingerprint(strategy,
-                                   opponents=short_run_time)
-    fp.fingerprint(turns=turns, repetitions=repetitions,
-                   progress_bar=False, processes=0)
+    fp = axl.TransitiveFingerprint(strategy, opponents=short_run_time)
+    fp.fingerprint(
+        turns=turns,
+        repetitions=repetitions,
+        progress_bar=False,
+        processes=processes,
+    )
     plt.figure()
     fp.plot(display_names=True)
     try:
@@ -138,10 +159,14 @@ def obtain_transitive_fingerprint_v_short(strategy, turns, repetitions):
     except AttributeError:
         name = strategy.name
     plt.tight_layout()
-    plt.savefig("assets/transitive_v_short_{}.png".format(format_filename(name)),
-                bbox_inches="tight")
-    np.savetxt("assets/transitive_v_short_{}.csv".format(format_filename(name)),
-               fp.data)
+    plt.savefig(
+        "assets/transitive_v_short_{}.png".format(format_filename(name)),
+        bbox_inches="tight",
+    )
+    np.savetxt(
+        "assets/transitive_v_short_{}.csv".format(format_filename(name)),
+        fp.data,
+    )
 
 
 def format_filename(s):
@@ -158,8 +183,8 @@ def format_filename(s):
     Borrowed from https://gist.github.com/seanh/93666
     """
     valid_chars = "-_.() {}{}".format(string.ascii_letters, string.digits)
-    filename = ''.join(c for c in s if c in valid_chars)
-    filename = filename.replace(' ','_')
+    filename = "".join(c for c in s if c in valid_chars)
+    filename = filename.replace(" ", "_")
     return filename
 
 
@@ -187,27 +212,33 @@ def write_markdown(strategy):
 ![Transitive fingerprint of {0} against short run time](./assets/transitive_v_short_{1}.png)
 
 [data (csv)](./assets/transitive_v_short_{1}.csv)
-    """.format(name, format_filename(name))
+    """.format(
+        name, format_filename(name)
+    )
     return markdown
 
 
-def main(turns, repetitions, 
-         transitive_turns, transitive_repetitions,
-         transitive_v_short_turns, transitive_v_short_repetitions):
+def main(
+    turns,
+    repetitions,
+    transitive_turns,
+    transitive_repetitions,
+    transitive_v_short_turns,
+    transitive_v_short_repetitions,
+    processes,
+):
     """
     Fingerprint all strategies, if a strategy has already been fingerprinted it
     does not get rerun.
     """
     version = axl.__version__
-    axlf_version = axlf.__version__
 
     markdown = """# Ashlock and transitive fingerprints
 
 See:
 [axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting](http://axelrod.readthedocs.io/en/latest/tutorials/further_topics/fingerprinting.html#fingerprinting)
 
-All strategies included from Axelrod version {} and all strategies from
-axelrod_fortran version {}
+All strategies included from Axelrod version {}.
 
 This README.md file is autogenerated by running:
 
@@ -226,7 +257,9 @@ fp.plot()
 
 # Axelrod library fingerprints
 
-    """.format(version, axlf_version, turns, repetitions)
+    """.format(
+        version, turns, repetitions
+    )
     try:
         db = read_db()
     except FileNotFoundError:
@@ -238,52 +271,29 @@ fp.plot()
         signature = hash_strategy(strategy)
         fp = "Ashlock"
         if (name, fp) not in db or db[name, fp] != signature:
-        #    obtain_fingerprint(strategy, turns, repetitions)
+            obtain_fingerprint(
+                strategy, turns, repetitions, processes=processes
+            )
             write_strategy_to_db(strategy, fingerprint=fp)
 
         fp = "Transitive"
         if (name, fp) not in db or db[name, fp] != signature:
-            obtain_transitive_fingerprint(strategy,
-                                          transitive_turns,
-                                          transitive_repetitions)
+            obtain_transitive_fingerprint(
+                strategy,
+                transitive_turns,
+                transitive_repetitions,
+                processes=processes,
+            )
             write_strategy_to_db(strategy, fingerprint=fp)
 
         fp = "Transitive_v_short"
         if (name, fp) not in db or db[name, fp] != signature:
-            obtain_transitive_fingerprint_v_short(strategy,
-                                                  transitive_v_short_turns,
-                                                  transitive_v_short_repetitions)
-            write_strategy_to_db(strategy, fingerprint=fp)
-
-        markdown += write_markdown(strategy)
-
-    markdown += """
-
-# Second tournament fortran strategy fingerprints
-
-"""
-
-    for name in axlf.all_strategies:
-        player = axlf.Player(name)
-        name = player.original_name
-        signature = hash_strategy(player)
-        fp = "Ashlock"
-        if (name, fp) not in db or db[name, fp] != signature:
-        #    obtain_fingerprint(strategy, turns, repetitions)
-            write_strategy_to_db(strategy, fingerprint=fp)
-
-        fp = "Transitive"
-        if (name, fp) not in db or db[name, fp] != signature:
-            obtain_transitive_fingerprint(strategy,
-                                          transitive_turns,
-                                          transitive_repetitions)
-            write_strategy_to_db(strategy, fingerprint=fp)
-
-        fp = "Transitive_v_short"
-        if (name, fp) not in db or db[name, fp] != signature:
-            obtain_transitive_fingerprint_v_short(strategy,
-                                                  transitive_turns,
-                                                  transitive_repetitions)
+            obtain_transitive_fingerprint_v_short(
+                strategy,
+                transitive_v_short_turns,
+                transitive_v_short_repetitions,
+                processes=processes,
+            )
             write_strategy_to_db(strategy, fingerprint=fp)
 
         markdown += write_markdown(strategy)
@@ -296,6 +306,13 @@ if __name__ == "__main__":
     turns, repetitions = 200, 20
     transitive_turns, transitive_repetitions = 200, 20
     transitive_v_short_turns, transitive_v_short_repetitions = 200, 20
-    main(turns, repetitions,
-         transitive_turns, transitive_repetitions,
-         transitive_v_short_turns, transitive_v_short_repetitions)
+    processes = 20
+    main(
+        turns=turns,
+        repetitions=repetitions,
+        transitive_turns=transitive_turns,
+        transitive_repetitions=transitive_repetitions,
+        transitive_v_short_turns=transitive_v_short_turns,
+        transitive_v_short_repetitions=transitive_v_short_repetitions,
+        processes=processes,
+    )
